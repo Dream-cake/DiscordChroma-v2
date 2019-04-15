@@ -1,10 +1,11 @@
 {
   "name": "discordchroma-v2",
-  "version": "1.0.0",
+  "version": "5.0.0",
   "description": "",
   "main": "start.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,22 @@
   "bugs": {
     "url": "https://github.com/Dream-cake/DiscordChroma-v2/issues"
   },
-  "homepage": "https://github.com/Dream-cake/DiscordChroma-v2#readme"
+  "homepage": "https://github.com/Dream-cake/DiscordChroma-v2#readme",
+  "dependencies": {
+    "@chroma-cloud/chromajs": "^0.1.21",
+    "discord-rpc": "^3.0.1",
+    "discord.js": "github:discordjs/discord.js#11.4-dev",
+    "electron-log": "^3.0.5",
+    "electron-updater": "^4.0.6",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "node-notifier": "^5.4.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "electron": "^4.1.4"
+  }
 }
