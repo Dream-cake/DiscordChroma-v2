@@ -3,6 +3,33 @@
   "version": "5.0.0",
   "description": "",
   "main": "start.js",
+  "build": {
+    "appId": "ga.dreaming.DiscordChroma",
+    "productName": "DiscordChromaV2",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Dream-cake",
+        "repo": "DiscordChroma-v2"
+      }
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
@@ -19,6 +46,8 @@
   "homepage": "https://github.com/Dream-cake/DiscordChroma-v2#readme",
   "dependencies": {
     "@chroma-cloud/chromajs": "^0.1.21",
+    "child_process": "^1.0.2",
+    "cors": "^2.8.5",
     "discord-rpc": "^3.0.1",
     "discord.js": "github:discordjs/discord.js#11.4-dev",
     "electron-log": "^3.0.5",
@@ -26,6 +55,7 @@
     "express": "^4.16.4",
     "fs": "0.0.1-security",
     "http": "0.0.0",
+    "iohook": "^0.4.4",
     "node-notifier": "^5.4.0",
     "path": "^0.12.7",
     "request": "^2.88.0",
@@ -33,5 +63,20 @@
   },
   "devDependencies": {
     "electron": "^4.1.4"
+  },
+  "iohook": {
+    "targets": [
+      "node-64",
+      "electron-69"
+    ],
+    "platforms": [
+      "win32",
+      "darwin",
+      "linux"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
   }
 }
